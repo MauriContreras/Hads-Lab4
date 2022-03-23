@@ -31,6 +31,36 @@
         <p>
             <asp:Button ID="Button1" runat="server" BackColor="#0066FF" Font-Bold="True" Font-Size="Medium" ForeColor="White" Height="53px" OnClick="Button1_Click1" Text="Estadisticas" Width="196px" />
         </p>
+        <p style="height: 96px">
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Importar" />
+        </p>
+        <p style="height: 96px">
+            <asp:Button ID="Button3" runat="server" Text="Exportar" OnClick="Button3_Click1" />
+        </p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
+        <p>
+            &nbsp;</p>
     </form>
 </body>
 </html>

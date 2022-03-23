@@ -83,6 +83,9 @@
     <Content Include="Web.config" />
     <Content Include="confirmar.aspx" />
     <Content Include="Estadisticas.aspx" />
+    <Content Include="ImportarTareasXML.aspx" />
+    <Content Include="ExportarTareasXML.aspx" />
+    <Content Include="ImportarXMLLeroy.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alumno.aspx.cs">
@@ -172,6 +175,27 @@
     </Compile>
     <Compile Include="Estadisticas.aspx.designer.cs">
       <DependentUpon>Estadisticas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarTareasXML.aspx.cs">
+      <DependentUpon>ImportarTareasXML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportarTareasXML.aspx.designer.cs">
+      <DependentUpon>ImportarTareasXML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExportarTareasXML.aspx.cs">
+      <DependentUpon>ExportarTareasXML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExportarTareasXML.aspx.designer.cs">
+      <DependentUpon>ExportarTareasXML.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportarXMLLeroy.aspx.cs">
+      <DependentUpon>ImportarXMLLeroy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportarXMLLeroy.aspx.designer.cs">
+      <DependentUpon>ImportarXMLLeroy.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
