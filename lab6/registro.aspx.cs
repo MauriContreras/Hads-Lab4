@@ -33,11 +33,11 @@ namespace lab2
             {
                 componenteEnvioEmail.envioEmail em = new componenteEnvioEmail.envioEmail();
 
-               Boolean resultado = em.enviarEmail(textBoxEmail.Text, numconfir, "Para confirmar el registro haz clic " +
-               "en el siguiente enlace: " + "https://localhost:44366/Private/confirmar.aspx?email=" + textBoxEmail.Text + "&numconfir=" + numconfir);
+               //Boolean resultado = em.enviarEmail(textBoxEmail.Text, numconfir, "Para confirmar el registro haz clic " +
+               //"en el siguiente enlace: " + "https://localhost:44366/Private/confirmar.aspx?email=" + textBoxEmail.Text + "&numconfir=" + numconfir);
 
-              // Boolean resultado = em.enviarEmail(textBoxEmail.Text, numconfir, "Para confirmar el registro haz clic " +
-              //"en el siguiente enlace: " + "https://hasd22-09.azurewebsites.net/Private/confirmar.aspx?email=" + textBoxEmail.Text + "&numconfir=" + numconfir);
+               Boolean resultado = em.enviarEmail(textBoxEmail.Text, numconfir, "Para confirmar el registro haz clic " +
+              "en el siguiente enlace: " + "https://hasd22-09.azurewebsites.net/Private/confirmar.aspx?email=" + textBoxEmail.Text + "&numconfir=" + numconfir);
 
                 if (resultado)
                 {
