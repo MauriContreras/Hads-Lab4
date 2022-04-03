@@ -4,3 +4,9 @@ C:\Users\Bryan\source\repos\DataAccess\obj\Debug\DataAccess.csproj.AssemblyRefer
 C:\Users\Bryan\source\repos\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Bryan\source\repos\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\Bryan\source\repos\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\mauri\Desktop\HADS\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\mauri\Desktop\HADS\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\mauri\Desktop\HADS\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\mauri\Desktop\HADS\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\mauri\Desktop\HADS\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\mauri\Desktop\HADS\DataAccess\obj\Debug\DataAccess.pdb

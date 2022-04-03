@@ -1,0 +1,12 @@
+C:\Users\Bryan\source\repos\componenteEnvioEmail\bin\Debug\componenteEnvioEmail.dll
+C:\Users\Bryan\source\repos\componenteEnvioEmail\bin\Debug\componenteEnvioEmail.pdb
+C:\Users\Bryan\source\repos\componenteEnvioEmail\obj\Debug\componenteEnvioEmail.csproj.AssemblyReference.cache
+C:\Users\Bryan\source\repos\componenteEnvioEmail\obj\Debug\componenteEnvioEmail.csproj.CoreCompileInputs.cache
+C:\Users\Bryan\source\repos\componenteEnvioEmail\obj\Debug\componenteEnvioEmail.dll
+C:\Users\Bryan\source\repos\componenteEnvioEmail\obj\Debug\componenteEnvioEmail.pdb
+C:\Users\mauri\Desktop\HADS\componenteEnvioEmail\bin\Debug\componenteEnvioEmail.dll
+C:\Users\mauri\Desktop\HADS\componenteEnvioEmail\bin\Debug\componenteEnvioEmail.pdb
+C:\Users\mauri\Desktop\HADS\componenteEnvioEmail\obj\Debug\componenteEnvioEmail.csproj.AssemblyReference.cache
+C:\Users\mauri\Desktop\HADS\componenteEnvioEmail\obj\Debug\componenteEnvioEmail.csproj.CoreCompileInputs.cache
+C:\Users\mauri\Desktop\HADS\componenteEnvioEmail\obj\Debug\componenteEnvioEmail.dll
+C:\Users\mauri\Desktop\HADS\componenteEnvioEmail\obj\Debug\componenteEnvioEmail.pdb

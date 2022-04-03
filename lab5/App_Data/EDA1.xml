@@ -1,0 +1,75 @@
+<?xml version="1.0" standalone="yes"?>
+<tareas>
+  <tarea codigo="EDA1-Ex5">
+    <descripcion>Examen sobre hashset</descripcion>
+    <hestimadas>4</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <tipotarea>true</tipotarea>
+  </tarea>
+  <tarea codigo="EDA20-Ej1">
+    <descripcion>Ejercicio sobre listas ligadas</descripcion>
+    <hestimadas>3</hestimadas>
+    <tipotarea>Ejercicio</tipotarea>
+    <tipotarea>true</tipotarea>
+  </tarea>
+  <tarea codigo="EDA20-Ej11">
+    <descripcion>Ejercicio sobre arrays </descripcion>
+    <hestimadas>3</hestimadas>
+    <tipotarea>Ejercicio</tipotarea>
+    <tipotarea>true</tipotarea>
+  </tarea>
+  <tarea codigo="EDA20-Ej12">
+    <descripcion>Ejercicio sobre listas </descripcion>
+    <hestimadas>3</hestimadas>
+    <tipotarea>Ejercicio</tipotarea>
+    <tipotarea>true</tipotarea>
+  </tarea>
+  <tarea codigo="EDA20-Ej2">
+    <descripcion>Ejercicio sobre arboles </descripcion>
+    <hestimadas>3</hestimadas>
+    <tipotarea>Ejercicio</tipotarea>
+    <tipotarea>true</tipotarea>
+  </tarea>
+  <tarea codigo="EDA20-Ej4">
+    <descripcion>Ejercicio sobre matrices</descripcion>
+    <hestimadas>7</hestimadas>
+    <tipotarea>Ejercicio</tipotarea>
+    <tipotarea>true</tipotarea>
+  </tarea>
+  <tarea codigo="EDA20-Ej5">
+    <descripcion>Ejercicio sobre vectores </descripcion>
+    <hestimadas>3</hestimadas>
+    <tipotarea>Ejercicio</tipotarea>
+    <tipotarea>true</tipotarea>
+  </tarea>
+  <tarea codigo="EDA20-Ex1">
+    <descripcion>examen</descripcion>
+    <hestimadas>12</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <tipotarea>true</tipotarea>
+  </tarea>
+  <tarea codigo="EDA20-Ex2">
+    <descripcion>examen</descripcion>
+    <hestimadas>3</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <tipotarea>true</tipotarea>
+  </tarea>
+  <tarea codigo="EDA20-Ex3">
+    <descripcion>Examen sobre arboles </descripcion>
+    <hestimadas>4</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <tipotarea>true</tipotarea>
+  </tarea>
+  <tarea codigo="EDA20-Ex4">
+    <descripcion>Examen sobre grafos </descripcion>
+    <hestimadas>4</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <tipotarea>true</tipotarea>
+  </tarea>
+  <tarea codigo="EDA20-Ex5">
+    <descripcion>Examen sobre hashmap </descripcion>
+    <hestimadas>5</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <tipotarea>true</tipotarea>
+  </tarea>
+</tareas>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -59,10 +60,16 @@ namespace lab2
                     DropDownList1.DataBind();
 
 
-
-                    Xml1.DocumentSource = Server.MapPath("App_Data/" + DropDownList1.SelectedValue + ".xml");
-                    Xml1.TransformSource = Server.MapPath("App_Data/VerTablaTareas.xsl");
-
+                    if (File.Exists(Server.MapPath("App_Data/" + DropDownList1.SelectedValue + ".xml")))
+                    {
+                        Label4.Visible = false;
+                        Xml1.DocumentSource = Server.MapPath("App_Data/" + DropDownList1.SelectedValue + ".xml");
+                        Xml1.TransformSource = Server.MapPath("App_Data/VerTablaTareas.xsl");
+                    } else
+                    {
+                        Label4.Visible = true;
+                        Label4.Text = "Error! No existe el fichero: " + DropDownList1.SelectedValue + ".xml" ;
+                    }
 
 
                 }
@@ -84,9 +91,17 @@ namespace lab2
 
             try
             {
-                Label4.Visible = false;
-                Xml1.DocumentSource = Server.MapPath("App_Data/" + DropDownList1.SelectedValue + ".xml");
-                Xml1.TransformSource = Server.MapPath("App_Data/VerTablaTareas.xsl");
+                if (File.Exists(Server.MapPath("App_Data/" + DropDownList1.SelectedValue + ".xml")))
+                {
+                    Label4.Visible = false;
+                    Xml1.DocumentSource = Server.MapPath("App_Data/" + DropDownList1.SelectedValue + ".xml");
+                    Xml1.TransformSource = Server.MapPath("App_Data/VerTablaTareas.xsl");
+                }
+                else
+                {
+                    Label4.Visible = true;
+                    Label4.Text = "Error! No existe el fichero: " + DropDownList1.SelectedValue + ".xml";
+                }
             }
             catch (Exception)
             {

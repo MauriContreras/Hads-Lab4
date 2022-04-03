@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace DataAccess
 {
@@ -19,21 +17,46 @@ namespace DataAccess
                 conexion.ConnectionString = "Server=tcp:hads22-09.database.windows.net,1433;Initial Catalog=hads22-09;Persist Security Info=False;User ID=mcontreras009@ikasle.ehu.eus@hads22-09;Password=Hadsbrymau09;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
                 conexion.Open();
                 return "CONEXION OK";
-             }
+            }
             catch (Exception e)
             {
                 return "ERROR DE CONEXION" + e.Message;
             }
-        } 
+        }
 
         public void cerrarconexion()
         {
             conexion.Close();
         }
+
+
+        private String hashMD5(String pass)
+        {
+            MD5CryptoServiceProvider md5Obj = new MD5CryptoServiceProvider();
+            Byte[] bytesToHash = System.Text.Encoding.ASCII.GetBytes(pass);
+            bytesToHash = md5Obj.ComputeHash(bytesToHash);
+            StringBuilder strResult = new StringBuilder();
+
+            foreach (byte b in bytesToHash)
+            {
+                strResult.Append(b.ToString("x2"));
+
+            }
+            return strResult.ToString();
+        }
+
+
+
         public String insertar(String email, String nombre, String apellidos, int numconfir, int confirmado, String tipo, String password, int codpass)
         {
+
+
+            String passhash = hashMD5(password);
+
+
+
             conectar();
-            String st = "insert into dbo.Usuario(email, nombre, apellidos, numconfir, confirmado, tipo, pass, codpass) values ('" + email + "', '" + nombre + "','" + apellidos + "', " + numconfir + ", " + confirmado + ", '" + tipo + "', '" + password + "', " + codpass + ")"; // confirmado 0 = no confirmado
+            String st = "insert into dbo.Usuario(email, nombre, apellidos, numconfir, confirmado, tipo, pass, codpass) values ('" + email + "', '" + nombre + "','" + apellidos + "', " + numconfir + ", " + confirmado + ", '" + tipo + "', '" + passhash + "', " + codpass + ")"; // confirmado 0 = no confirmado
             int numregs;
             comando = new SqlCommand(st, conexion);
             try
@@ -41,7 +64,7 @@ namespace DataAccess
                 numregs = comando.ExecuteNonQuery();
                 return "Se ha registrado correctamente, para confirmar el registro revisa tu email. ";
             }
-            catch (Exception ex)
+            catch 
             {
                 return "Error! El usuario ya existe querida.";
             }
@@ -62,7 +85,7 @@ namespace DataAccess
         }
 
 
-        public Boolean confirmarRegistro2 (String emailP, int codP)
+        public Boolean confirmarRegistro2(String emailP, int codP)
         {
             conectar();
 
@@ -70,8 +93,8 @@ namespace DataAccess
             SqlCommand cmd = new SqlCommand(st, conexion);
             cmd.Parameters.AddWithValue("@mail", emailP);
             SqlDataReader data = cmd.ExecuteReader();
-          
-            int numconfirmacion=-1;
+
+            int numconfirmacion = -1;
             Boolean confirmed = false;
 
             if (data.HasRows)
@@ -82,7 +105,7 @@ namespace DataAccess
                     confirmed = data.GetBoolean(1);
 
                 }
-                if (numconfirmacion == codP & confirmed==false)
+                if (numconfirmacion == codP & confirmed == false)
                 {
 
                     String st2 = "update Usuario set confirmado=1 where email=@mail";
@@ -100,7 +123,7 @@ namespace DataAccess
                         return false;
                     }
 
-                 
+
                 }
                 else
                 {
@@ -114,7 +137,7 @@ namespace DataAccess
                 cerrarconexion();
                 return false;
             }
-           
+
         }
 
         public Boolean confirmarRegistro(String emailP, int codP)
@@ -126,26 +149,26 @@ namespace DataAccess
                 String st = "select * from Usuario where email='" + emailP + "' and numconfir=" + codP + ";";
                 comando = new SqlCommand(st, conexion);
                 SqlDataReader res = comando.ExecuteReader();
-                
+
 
                 if (res.HasRows)
                 {
 
                     try
                     {
-                      
+
                         String st2 = "update Usuario set confirmado=1 where email=@mail";
                         SqlCommand cmd2 = new SqlCommand(st2, conexion);
                         cmd2.Parameters.AddWithValue("@mail", emailP);
                         int data2 = cmd2.ExecuteNonQuery();
-                        if (data2 ==1)
+                        if (data2 == 1)
                         {
                             return true;
 
                         }
                         return false;
                     }
-                    catch (Exception ex)   
+                    catch (Exception ex)
                     {
 
                         return false;
@@ -166,7 +189,7 @@ namespace DataAccess
             }
             catch (Exception ex)
             {
-                return false;   
+                return false;
             }
 
             return true;
@@ -196,7 +219,7 @@ namespace DataAccess
                 return false;
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -204,16 +227,19 @@ namespace DataAccess
             {
                 cerrarconexion();
             }
-            
+
         }
 
         public int login(String email, String pass)
         {
-            String st = "select count(*) from dbo.Usuario where email = '" + email + "' and pass = '" + pass + "' and confirmado = " + 1 + " ";
+
+            String passH = hashMD5(pass);
+
+            String st = "select count(*) from dbo.Usuario where email = '" + email + "' and pass = '" + passH + "' and confirmado = " + 1 + " ";
             comando = new SqlCommand(st, conexion);
             return (int)comando.ExecuteScalar();
         }
-        
+
 
         public Boolean modificarPass(String correo, int codigo, String password)
         {
@@ -222,16 +248,18 @@ namespace DataAccess
                 conectar();
                 String st = "select count(*) from dbo.Usuario where email = '" + correo + "' and codpass = '" + codigo + "' and confirmado = " + 1 + " ";
 
+                String passH = hashMD5(password);
+
                 comando = new SqlCommand(st, conexion);
 
                 int result = (int)comando.ExecuteScalar();
 
                 if (result == 1)
                 {
-                    
+
                     String st4 = "update Usuario set pass=@passw where email=@mail";
                     SqlCommand cmd4 = new SqlCommand(st4, conexion);
-                    cmd4.Parameters.AddWithValue("@passw", password);
+                    cmd4.Parameters.AddWithValue("@passw", passH);
                     cmd4.Parameters.AddWithValue("@mail", correo);
                     int data4 = cmd4.ExecuteNonQuery();
                     if (data4 == 1)
@@ -253,7 +281,7 @@ namespace DataAccess
                     return false;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -261,7 +289,7 @@ namespace DataAccess
             {
                 cerrarconexion();
             }
-            
+
 
 
         }
@@ -287,7 +315,7 @@ namespace DataAccess
                     return false;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return false;
             }
@@ -295,7 +323,7 @@ namespace DataAccess
             {
                 cerrarconexion();
             }
-           
+
 
 
         }

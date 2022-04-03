@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzBIQW2gw30K4CLab4HTnzwAAAAACAAAAAAAQZgAAAAEAACAAAADUrnZqUg9rmuHnmJRpJacbhlCCaqk9aPlXaJFYkCcxuwAAAAAOgAAAAAIAACAAAABmzZGpzebLS4Z/1d108Ndw4whdwhaO+g6MDwKmkMS2SIAAAADdueMkyE/If7olhHhaZJSkZSz7A8gsD8An+EQvTzPHryEuCLSayXIHXef9H3QX95NHZfE7XSIvQCovk2WH8EK5SiwoGUayj0z1TqAaOW8tdvcALP/6owzHC4MaidDrZPNHGsVycBUH3W0803lbPgiurW0++B3f+GpQUqgWiiW+QkAAAABUdK0ch9UhoixVDCS81GABrlj6EsHRk3kTGXTmV+IbmXmO03+UVCEcRLZyBhszQy6Mi7TXZZhJR5N8MXeKQ6Ly</EncryptedPassword>
+    <_PublishTargetUrl>ftp://waws-prod-am2-477.ftp.azurewebsites.windows.net/site/wwwroot</_PublishTargetUrl>
+    <History>False|2022-04-03T18:33:24.7500320Z;False|2022-04-03T20:32:07.1124387+02:00;False|2022-04-03T20:29:37.2149510+02:00;False|2022-04-03T20:28:13.5375096+02:00;False|2022-04-03T20:18:02.0944686+02:00;False|2022-04-03T20:17:22.2540875+02:00;False|2022-04-03T20:17:00.1048662+02:00;False|2022-04-03T20:14:49.3575703+02:00;False|2022-04-03T19:59:54.4806828+02:00;False|2022-03-28T15:53:43.3228783+02:00;False|2022-03-28T15:50:49.0536059+02:00;False|2022-03-28T15:49:38.8438502+02:00;False|2022-03-28T15:49:11.3850886+02:00;</History>
+  </PropertyGroup>
+</Project>

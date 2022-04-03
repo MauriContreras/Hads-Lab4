@@ -108,7 +108,7 @@ namespace lab2
 
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dataTable = dataSet.Tables["tareas"];
+            dataTable = dataSet.Tables["Tareas"];
             String filtroTareas = "codAsig = '" + DropDownList1.SelectedValue + "'";
             DataView dataview = new DataView(dataTable);
             dataview.RowFilter = filtroTareas;
@@ -117,6 +117,11 @@ namespace lab2
 
             GridView1.DataSource = dataTableFiltrada;
             GridView1.DataBind();
+
+            DataSet datasetFiltrado = new DataSet();
+            datasetFiltrado.Tables.Add(dataTableFiltrada);
+            Session["datasetFiltrado"] = datasetFiltrado;
+
         }
 
         protected void botonCerrarSesion_Click(object sender, EventArgs e)
@@ -145,10 +150,10 @@ namespace lab2
                 Label4.Visible = true;
                 Label4.Text = "XML creado con exito: " + DropDownList1.SelectedValue + ".xml";
             }
-            catch
+            catch (Exception ex)
             {
                 Label4.Visible = true;
-                Label4.Text = "Error!";
+                Label4.Text = ex.ToString();
             }
         }
 

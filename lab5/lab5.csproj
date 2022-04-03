@@ -194,8 +194,10 @@
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\hasd22-09 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\hasd22-09 - FTP1.pubxml" />
+    <None Include="Properties\PublishProfiles\hasd22-09 - FTP2.pubxml" />
     <None Include="Properties\PublishProfiles\hasd22-09 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\hasd22-09 - Web Deploy1.pubxml" />
+    <None Include="Properties\PublishProfiles\hasd22-09 - Web Deploy2.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -204,7 +206,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\componenteEnvioEmail\componenteEnvioEmail.csproj">
+    <ProjectReference Include="..\componenteEnvioEmail\componenteEnvioEmail\componenteEnvioEmail.csproj">
       <Project>{912d5b37-8839-40a5-9fd5-93c76408a68f}</Project>
       <Name>componenteEnvioEmail</Name>
     </ProjectReference>

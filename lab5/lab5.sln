@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab5", "lab5.csproj", "{160
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "..\DataAccess\DataAccess.csproj", "{82584C15-7F0E-4D72-9BC6-290D27A82E44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "componenteEnvioEmail", "..\componenteEnvioEmail\componenteEnvioEmail.csproj", "{912D5B37-8839-40A5-9FD5-93C76408A68F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "componenteEnvioEmail", "..\componenteEnvioEmail\componenteEnvioEmail\componenteEnvioEmail.csproj", "{912D5B37-8839-40A5-9FD5-93C76408A68F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

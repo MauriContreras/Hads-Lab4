@@ -35,7 +35,7 @@
         <p>
             &nbsp;</p>
         <p style="margin-left: 40px; width: 96px;">
-            <asp:Button ID="botonLogin" runat="server" Height="49px" Text="Login" Width="89px" OnClick="botonLogin_Click" />
+            <asp:Button ID="botonLogin" runat="server" Height="49px" Text="Login" Width="89px" OnClick="botonLogin_Click" BackColor="#0066FF" Font-Bold="True" Font-Size="Medium" ForeColor="White" />
         &nbsp;
         </p>
         <p style="width: 137px">

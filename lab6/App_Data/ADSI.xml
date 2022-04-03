@@ -1,0 +1,69 @@
+<?xml version="1.0" standalone="yes"?>
+<tareas>
+  <tarea codigo="ADSI-Ej1">
+    <descripcion>Bryan no se ducha</descripcion>
+    <hestimadas>2</hestimadas>
+    <tipotarea>Ejercicio</tipotarea>
+    <explotacion>false</explotacion>
+  </tarea>
+  <tarea codigo="ADSI-Ej2">
+    <descripcion>Ejercicio sobre dragon ball </descripcion>
+    <hestimadas>2</hestimadas>
+    <tipotarea>Ejercicio</tipotarea>
+    <explotacion>false</explotacion>
+  </tarea>
+  <tarea codigo="ADSI-Ex1">
+    <descripcion>examen</descripcion>
+    <hestimadas>4</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <explotacion>true</explotacion>
+  </tarea>
+  <tarea codigo="ADSI-Ex2">
+    <descripcion>Examen sobre no se </descripcion>
+    <hestimadas>2</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <explotacion>false</explotacion>
+  </tarea>
+  <tarea codigo="ADSI-Ex3">
+    <descripcion>Examen sobre diseño de algoritmos</descripcion>
+    <hestimadas>2</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <explotacion>false</explotacion>
+  </tarea>
+  <tarea codigo="ADSI-Ex5">
+    <descripcion>Examen sobre algoritmos recursivos</descripcion>
+    <hestimadas>5</hestimadas>
+    <tipotarea>Examen</tipotarea>
+    <explotacion>false</explotacion>
+  </tarea>
+  <tarea codigo="ADSI-Lab1">
+    <descripcion>Laboratorio de Gestion</descripcion>
+    <hestimadas>7</hestimadas>
+    <tipotarea>Laboratorio</tipotarea>
+    <explotacion>true</explotacion>
+  </tarea>
+  <tarea codigo="ADSI-Lab2">
+    <descripcion>Laboratorio sobre algoritmos de los 80 </descripcion>
+    <hestimadas>2</hestimadas>
+    <tipotarea>Laboratorio</tipotarea>
+    <explotacion>false</explotacion>
+  </tarea>
+  <tarea codigo="ADSI-Lab3">
+    <descripcion>Laboratorio algo 2</descripcion>
+    <hestimadas>5</hestimadas>
+    <tipotarea>Laboratorio</tipotarea>
+    <explotacion>true</explotacion>
+  </tarea>
+  <tarea codigo="ADSI-Lab4">
+    <descripcion>Laboratorio algo 3</descripcion>
+    <hestimadas>6</hestimadas>
+    <tipotarea>Laboratorio</tipotarea>
+    <explotacion>false</explotacion>
+  </tarea>
+  <tarea codigo="ADSI-Lab5">
+    <descripcion>Laboratorio algo 4</descripcion>
+    <hestimadas>7</hestimadas>
+    <tipotarea>Laboratorio</tipotarea>
+    <explotacion>false</explotacion>
+  </tarea>
+</tareas>
